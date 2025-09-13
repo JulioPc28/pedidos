@@ -1,16 +1,58 @@
-# grupo_exito
+# 🧪 Prueba Técnica – Desarrollo en Flutter
 
-A new Flutter project.
+Este proyecto se construyó con **Flutter** y está pensada para funcionar tanto en **Android** como en **Web**, manteniendo una experiencia visual y funcional coherente en ambas plataformas.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Tecnologías utilizadas
 
-A few resources to get you started if this is your first Flutter project:
+- **Flutter**
+- **Dart**
+- **Provider** para gestión de estado
+- **SharedPreferences** para persistencia local
+- **GoRouter** para navegación declarativa
+- **Sizer** para diseño responsivo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Estructura del proyecto
+
+lib/
+├── models/               # Modelos de datos (Product, etc.)
+├── providers/            # Lógica de estado (CartProvider, etc.)
+├── services/             # Servicios simulados (ApiService)
+├── presentation/
+│   ├── views/            # Pantallas principales (Home, Cart, etc.)
+│   └── widget/           # Componentes reutilizables (TextInputPedidos, etc.)
+├── main.dart             # Punto de entrada de la app
+├── routes/               # Configuración de rutas y navegación
+assets/
+├── images/               # Imágenes de productos o ilustraciones
+
+
+---
+
+## 🖼️ Funcionalidades principales
+
+- Visualización de categorías en modo lista y cuadrícula
+- Navegación entre categorías y productos
+- Carrito con modo normal y express
+- Persistencia del modo express entre sesiones
+- Botones para agregar/quitar productos desde el carrito
+- Cálculo automático del total de compra
+- Diseño adaptable para Web y Android
+
+---
+
+## 📌 Notas técnicas
+
+- El proyecto utiliza una clase `ApiService` que realiza **peticiones HTTP reales** a la API pública [FakeStoreAPI](https://fakestoreapi.com).
+- Se consumen endpoints para obtener categorías, productos por categoría, todos los productos y la primera imagen de cada categoría.
+- La lógica de negocio está desacoplada del origen de datos, lo que permite escalar o migrar a otra API sin modificar la interfaz.
+- El estado del carrito se gestiona con `Provider`, y se incluye persistencia del modo express mediante `SharedPreferences`.
+- El diseño es completamente responsivo gracias a `Sizer`, adaptándose a Web y Android sin perder proporción visual.
+
+---
+
+Gracias por la oportunidad 🙌
+
